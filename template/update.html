@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <h1>Update Here</h1>
+        <link rel="stylesheet" href="{% static 'css/update.css'%}">
+    </head>
+    <body>
+        {% block content %}
+        <form method="POST">
+            {% csrf_token %}
+            <div class="update_form">
+                <div class="up_name">
+                    <label>Name</label>
+                    <input type="text" value="{{obj.name}}" name="up_name">
+                </div>
+                <div class="up_age">
+                    <label>Age</label>
+                    <input type="number" value="{{obj.age}}" name="up_age">
+                </div>
+                <div class="up_mail">
+                    <label>E-Mail</label>
+                    <input type="email" value="{{obj.mail}}" name="up_mail">
+                </div>
+                <div class="up_gender">
+                    <label>Gender</label>
+                    <input type="text" value="{{obj.gender}}" name="up_gender">
+                </div>
+                <div class="up_phnumber">
+                    <label>Ph Number</label>
+                    <input type="text" value="{{obj.phnumber}}" name="up_phnumber">
+                </div>
+            </div>
+            <div class="update_btn">
+                <a href="/display"><input type="submit" value="Update"></a>
+            </div>
+        </form>
+        {% endblock %}
+    </body>
+</html>

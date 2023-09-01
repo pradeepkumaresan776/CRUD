@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/display.css' %}">
+    </head>
+    <body>
+        {% block content %}
+        <h1>All Student Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>E-Mail</th>
+                    <th>Gender</th>
+                    <th>Ph Number</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in obj %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.mail}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>{{i.phnumber}}</td>
+                    <td>
+                        <div class="update">
+                            <a href="/update{{i.id}}"><input type="submit" value="Update"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="delete">
+                            <a href="/delete{{i.id}}"><input type="submit" value="delete"></a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="back_btn">
+            <a href="/form"><input type="submit" value="Go back"></a>
+        </div>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,46 @@
+body{
+    font-family: sans-serif;
+    background-color: gray;
+}
+h1{
+    text-align: center;
+}
+.update_form{
+    margin-left: 30%;
+}
+.up_name, .up_age, .up_mail, .up_gender, .up_phnumber{
+    padding: 5px 0px;
+}
+.up_name input{
+    margin-left: 43px;
+}
+.up_age input{
+    margin-left: 57px;
+}
+.up_mail input{
+    margin-left: 40px;
+}
+.up_gender input{
+    margin-left: 33px;
+}
+.up_phnumber input{
+    margin-left: 5px;
+}
+.update_btn input{
+    transition: 0.5s;
+    margin-left: 45%;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px white;
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+.update_btn input:hover{
+    transition: 0.5s;
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 20px black;
+}
